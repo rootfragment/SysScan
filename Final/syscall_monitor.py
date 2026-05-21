@@ -62,15 +62,13 @@ def move_to(row: int):
 
 
 BANNER_LINES = [
-    r"  __  ___      ___       __       _______. ",
-    r" |  |/  /     /   \     |  |     /       | ",
-    r" |  '  /     /  ^  \    |  |    |   (----` ",
-    r" |    <     /  /_\  \   |  |     \   \     ",
-    r" |  .  \   /  _____  \  |  | .----)   |    ",
-    r" |__|\__\ /__/     \__\ |__| |_______/     ",
+    r"     _______.____    ____  _______.     _______.  ______     ___      .__   __. ",
+    r"    /       |\   \  /   / /       |    /       | /      |   /   \     |  \ |  | ",
+    r"   |   (----` \   \/   / |   (----`   |   (----`|  ,----'  /  ^  \   |   \|  | ",
+    r"    \   \      \_    _/   \   \        \   \    |  |      /  /_\  \  |  . `  | ",
+    r".----)   |       |  | .----)   |   .----)   |   |  `----./  _____  \ |  |\   | ",
+    r"|_______/        |__| |_______/    |_______/     \______/__/     \__\|__| \__| ",
 ]
-```
-
 BANNER_HEIGHT = len(BANNER_LINES) + 2
 
 def print_banner():
@@ -408,7 +406,7 @@ def remove_daemon(log: logging.Logger):
 def main():
     p = argparse.ArgumentParser(
         prog="syscall_monitor.py",
-        description="KAIS — Kernel-level Automated Integrity Scanner",
+        description="SysScan",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
