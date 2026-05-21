@@ -2,7 +2,7 @@ import os
 import platform
 
 PROC_LIVE_TABLE = "/proc/syscall_live"
-OUTPUT_FILE = "syscall.txt"
+OUTPUT_FILE = "syscall.txt" #intentionally hardcoded for minimalism
 
 def load_system_map():
     release = platform.release()
