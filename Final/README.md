@@ -10,9 +10,9 @@ This project combines:
 - Static kernel symbol reconciliation
 - Continuous integrity monitoring
 
-It was built as a response to a fundamental weakness in many syscall-hook detectors:
+It was built as a response to a fundamental weakness in argus(self project):
 
-> if malware executes before the detector initializes, the detector may unknowingly trust already-compromised kernel state.
+> if malware executes before the detector initializes, the detector unknowingly trust already-compromised kernel state.
 
 Instead of treating the running kernel as the source of truth, this project shifts trust toward the static kernel image (`System.map`) and reconstructs expected runtime syscall addresses dynamically.
 
@@ -20,9 +20,9 @@ Instead of treating the running kernel as the source of truth, this project shif
 
 # Why
 
-The original motivation came from a practical failure case in traditional syscall hook detectors.
+The original motivation came from a practical failure case in a previous hobby project.
 
-Most syscall integrity monitors work like this:
+My syscall integrity monitors worked like this:
 
 ```text
 running kernel -> generate baseline
