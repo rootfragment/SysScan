@@ -76,7 +76,7 @@ def print_banner():
     w(HIDE_CURSOR)
     for line in BANNER_LINES:
         w(f"{CYAN}{BOLD}{line}{RESET}\n")
-    w(f"{GREY}  kernel-level automated integrity scanner{RESET}\n")
+    w(f"{GREY}  Systemcall integrity monitor{RESET}\n")
     w("\n")
     flush()
 
@@ -92,7 +92,7 @@ def draw_status(last_check: str, status_ok: bool, n_syscalls: int,
 
 
     move_to(row);     w(CLEAR_LINE)
-    w(f"  {WHITE}{BOLD}KAIS — Syscall Integrity Monitor{RESET}\n")
+    w(f"  {WHITE}{BOLD}SysScan - Syscall Integrity Monitor{RESET}\n")
 
 
     move_to(row + 1); w(CLEAR_LINE)
