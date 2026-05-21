@@ -79,8 +79,8 @@ static int __init kaslr_finder_init(void)
     unsigned long first_offset = 0;
     int i;
     int matches = 0;
-    int unresolved = 0;   /* anchors kallsyms couldn't find */
-    int mismatches = 0;   /* anchors with inconsistent offsets */
+    int unresolved = 0;   
+    int mismatches = 0;   
 
     if (resolve_kallsyms()) {
         pr_err("KASLR Finder: Failed to resolve kallsyms_lookup_name\n");
